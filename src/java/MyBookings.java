@@ -20,8 +20,9 @@ public class MyBookings extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Your Bookings</title>");
-        out.println("<link rel='stylesheet' href='MyBookings.css'>");  
-        out.println("<link rel='stylesheet' href='dnavbar.css'>");
+        out.println("<link rel='stylesheet' href='" + request.getContextPath() + "/MyBookings.css'>");
+out.println("<link rel='stylesheet' href='" + request.getContextPath() + "/dnavbar.css'>");
+
         out.println("</head>");
         out.println("<body>");
         out.println("<nav class='navbar'>");

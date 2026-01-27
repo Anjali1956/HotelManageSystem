@@ -26,7 +26,8 @@ public class details extends HttpServlet {
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<title>Room Details</title>");
-        out.println("<link rel='stylesheet' href='details.css'>");
+        out.println("<link rel='stylesheet' href='" + request.getContextPath() + "/details.css'>");
+
         out.println("</head>");
         out.println("<body>");
         out.println("<div class='content'>");

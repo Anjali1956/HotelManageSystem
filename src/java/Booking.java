@@ -18,7 +18,6 @@ public class Booking extends HttpServlet {
         PrintWriter out = response.getWriter();
         String roomName = request.getParameter("roomName");
         String price = request.getParameter("price");
-
         if (roomName == null || roomName.isEmpty() || price == null || price.isEmpty()) {
             out.println("<p style='color:red;'>Room details are missing!</p>");
             return;
@@ -28,7 +27,7 @@ public class Booking extends HttpServlet {
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<title>Booking Form</title>");
-        out.println("<link rel='stylesheet' type='text/css' href='Booking.css'>");
+        out.println("<link rel='stylesheet' type='text/css' href='" + request.getContextPath() + "/Booking.css'>");
         out.println("</head>");
         out.println("<body>");
         out.println("<div class='booking-form'>");
@@ -85,7 +84,6 @@ public class Booking extends HttpServlet {
         String idType = request.getParameter("idType");
         String bookingDate = request.getParameter("bookingDate");
         String specialRequests = request.getParameter("specialRequests");
-
         HttpSession session = request.getSession();
         String username = (String) session.getAttribute("username");
         if (username == null) {

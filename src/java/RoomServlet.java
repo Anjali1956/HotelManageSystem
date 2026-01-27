@@ -20,8 +20,9 @@ public class RoomServlet extends HttpServlet {
         out.println("<html lang='en'>");
         out.println("<head>");
         out.println("<title>Hotel Management System - Rooms</title>");
-        out.println("<link rel='stylesheet' href='dnavbar.css'>");  
-        out.println("<link rel='stylesheet' href='room.css'>");
+        out.println("<link rel='stylesheet' href='" + request.getContextPath() + "/dnavbar.css'>");
+out.println("<link rel='stylesheet' href='" + request.getContextPath() + "/room.css'>");
+
         out.println("</head>");
         out.println("<body>");
         out.println("<nav class='navbar'>");

@@ -24,7 +24,8 @@ public class Login extends HttpServlet {
         out.println("<meta charset='UTF-8'>");
         out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
         out.println("<title>Login</title>");
-        out.println("<link rel='stylesheet' type='text/css' href='login.css'>");
+        out.println("<link rel='stylesheet' type='text/css' href='" + request.getContextPath() + "/login.css'>");
+
         out.println("<script>");
         out.println("function showAlert(message) {");
         out.println("  alert(message);");

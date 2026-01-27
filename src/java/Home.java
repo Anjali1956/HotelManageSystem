@@ -18,8 +18,8 @@ public class Home extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
-        out.println("<title>Hotel Management System - Home</title>");       
-        out.println("<link rel='stylesheet' type='text/css' href='home.css'>");  
+        out.println("<title>Hotel Management System - Home</title>");   
+        out.println("<link rel='stylesheet' type='text/css' href='" + request.getContextPath() + "/home.css'>");
         out.println("</head>");
         out.println("<body>");
         out.println("<div class='container'>");

@@ -18,7 +18,6 @@ public class Adashboard extends HttpServlet {
     out.println("<title>Admin Dashboard</title>");
     out.println("<style>");  
     out.println("body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa, #c3cfe2); margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; height: 100vh; }");
-
     out.println(".navbar { position: absolute; top: 0; width: 100%; background-color: #333; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }");
     out.println(".navbar h1 { margin: 0; font-size: 20px; }");
     out.println(".navbar a { color: white; text-decoration: none; margin: 0 15px; font-size: 16px; }");
@@ -30,7 +29,7 @@ public class Adashboard extends HttpServlet {
     out.println(".card h3 { margin: 0 0 10px; font-size: 20px; color: #333; }");
     out.println(".btn { display: inline-block; background-color: #007bff; color: white; padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }");
     out.println(".btn:hover { background-color: #0056b3; }");
-   out.println("</style>");
+    out.println("</style>");
     out.println("</head>");
     out.println("<body>");
     out.println("<div class='navbar'>");
@@ -39,7 +38,7 @@ public class Adashboard extends HttpServlet {
     out.println("<a href='manageRoom'>Add Room</a>");
     out.println("<a href='AdminBookings'>View Bookings</a>");
     out.println("<a href='roomopt'>Manage Room</a>");
-     out.println("<a href='Home'>Logout</a>");
+    out.println("<a href='Home'>Logout</a>");
     out.println("</div>");
     out.println("</div>");
     out.println("<div class='container'>");

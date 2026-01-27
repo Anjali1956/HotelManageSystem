@@ -42,11 +42,9 @@ public class AdminBookings extends HttpServlet {
         out.println("td{background:#f9f9f9}");
         out.println("button{padding:6px 12px;background:#e74c3c;color:white;border:none;border-radius:4px;cursor:pointer}");
         out.println("button:hover{background:#c0392b}");
-
         out.println("</style>");
         out.println("</head>");
         out.println("<body>");
-
         out.println("<div class='navbar'>");
         out.println("<h1>Admin Dashboard</h1>");
         out.println("<a href='Adashboard'>Dashboard</a>");
@@ -54,15 +52,12 @@ public class AdminBookings extends HttpServlet {
         out.println("<a href='AdminBookings'>Bookings</a>");
         out.println("<a href='roomopt'>Manage Rooms</a>");
         out.println("</div>");
-
         out.println("<div class='container'>");
-
         if ("true".equals(successMessage)) {
             out.println("<script>alert('Booking deleted successfully');</script>");
         } else if ("false".equals(successMessage)) {
             out.println("<script>alert('Failed to delete booking');</script>");
         }
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection(

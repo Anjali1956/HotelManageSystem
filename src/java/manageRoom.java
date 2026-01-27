@@ -30,8 +30,8 @@ out.println(".navbar a:hover { text-decoration: underline; }");
 out.println(".content { margin-top: 120px; width: 100%; display: flex; justify-content: center; }");
 
 out.println("</style>");
+out.println("<link rel='stylesheet' type='text/css' href='" + request.getContextPath() + "/manageroom.css'>");
 
-    out.println("<link rel='stylesheet' type='text/css' href='manageroom.css'>");
     out.println("</head>");
     out.println("<body>");
     out.println("<body>");

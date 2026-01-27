@@ -18,7 +18,7 @@ public class AboutUsServlet extends HttpServlet {
         out.println("<meta charset='UTF-8'>");
         out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
         out.println("<title>Hotel Management System - About Us</title>");
-        out.println("<link rel='stylesheet' type='text/css' href='aboutUs.css'>");  
+        out.println("<link rel='stylesheet' type='text/css' href='"  + request.getContextPath() + "/aboutUs.css'>");
         out.println("</head>");
         out.println("<body>");
         out.println("<div class='about-us-container'>");
