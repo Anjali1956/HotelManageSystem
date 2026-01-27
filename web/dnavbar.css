@@ -1,0 +1,58 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar (Fixed at Top, Less Height, Centered) */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 8px 20px;  /* Less padding for a sleek look */
+    display: flex;
+    justify-content: center;  /* Center elements horizontally */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 50px;  /* Less height */
+}
+
+
+/* Navigation Links - Centered & Evenly Spaced */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;  /* Make sure items are evenly spaced */
+}
+
+.nav-links li {
+    margin: 0 30px;  /* Larger spacing between items */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00c6a9;
+    
+}
+
+/* Adjust Content Position (More Space Below Navbar) */
+.main-content {
+    margin-top: 70px; /* Increased margin to push content further down */
+    padding: 20px;
+}

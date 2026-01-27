@@ -1,0 +1,87 @@
+body {
+    font-family: 'RubberStasoIT', sans-serif;
+    background-image: url('images/g2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    box-sizing: border-box;
+}
+.form-box-wrapper {
+    width: 100%;
+    max-width: 500px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.form-box h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px; 
+}
+.form-group label {
+    font-size: 13px; 
+    color: #555;
+    margin-bottom: 2px; 
+    font-weight: bold; 
+}
+.form-group input, .form-group textarea, .form-group select {
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 6px; 
+    font-size: 13px; 
+    width: 100%;
+    margin-bottom: 3px; 
+    box-sizing: border-box;
+    font-weight: bold; 
+    transition: border 0.3s ease;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #00c6a9; 
+    outline: none;
+}
+button {
+    background-color: #00c6a9;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px; 
+    font-weight: bold; 
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: #009c7f; 
+    transform: translateY(-2px); 
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 198, 169, 0.6); 
+}
+textarea {
+    resize: vertical; 
+    min-height: 70px; 
+}
+@media (max-width: 600px) {
+    .form-box-wrapper {
+        padding: 8px; 
+    }
+    .form-box h2 {
+        font-size: 22px; 
+    }
+}

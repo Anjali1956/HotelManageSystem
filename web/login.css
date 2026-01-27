@@ -1,0 +1,85 @@
+/* Body with background image */
+body {
+    font-family: Arial, sans-serif; /* simple font */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background: url('./images/g2.jpg') no-repeat center/cover; /* background image */
+    color: #333; /* text color */
+}
+
+/* Alert popup */
+.alert-container {
+    display: none; /* hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center popup */
+    background: rgba(0, 0, 0, 0.7); /* dark transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff; /* white text */
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Login box */
+.login-container {
+    background: rgba(245, 245, 240, 0.85); /* light beige */
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* soft shadow */
+}
+
+/* Heading */
+.login-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2e2e2e;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #2e2e2e;
+}
+
+/* Input fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff; /* white background */
+    color: #333;       /* dark text */
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #00796b; /* teal color */
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Links */
+a {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555; /* gray color */
+    text-decoration: none;
+}

@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('./images/room1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+.image-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.info-container {
+    flex: 1;
+    max-width: 50%;
+}
+.info-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+}
+.info-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+.info-container b {
+    font-weight: bold;
+}
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #218838;
+}
+p[style="color:red;"] {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}

@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh; /* full viewport height */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    background: url('./images/a2.jpg') no-repeat center center/cover;
+}
+
+.about-us-container {
+    width: 95%;              /* increased width */
+    max-width: 1000px;       /* slightly bigger max width */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6); /* more transparent */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* optional shadow for depth */
+}
+
+.about-us-container h1 {
+    font-size: 3em;
+    color: #333;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-us-container p {
+    font-size: 1.2em;
+    color: #444;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: justify;
+}
