@@ -22,7 +22,6 @@ public class Home extends HttpServlet {
         out.println("<link rel='stylesheet' type='text/css' href='home.css'>");  
         out.println("</head>");
         out.println("<body>");
-
         out.println("<div class='container'>");
         out.println("<h1>Welcome to Our Hotel Management System</h1>");
         out.println("<br>");

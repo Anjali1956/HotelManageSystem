@@ -45,7 +45,7 @@ public class Gallery extends HttpServlet {
         }
         out.println("</div>"); 
         out.println("<div class='login-redirect'>");
-        out.println("<button onclick=\"window.location.href='http://localhost:8080/HotelManageSytem/Login'\">Login to Book</button>");
+        out.println("<button onclick=\"window.location.href='Login'\">Login to Book</button>");
         out.println("</div>");
         out.println("</div>"); 
         out.println("</body>");

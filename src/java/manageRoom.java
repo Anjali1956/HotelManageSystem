@@ -124,9 +124,9 @@ out.println("<div class='content'>");
         ps.close();
 
         if (result > 0) {
-            out.println("<script>alert('Room status updated successfully!'); window.location.href='/HotelManageSytem/manageRoom';</script>");
+            out.println("<script>alert('Room status updated successfully!'); window.location.href='manageRoom';</script>");
         } else {
-            out.println("<script>alert('Failed to update room status. Try again!'); window.location.href='/HotelManageSytem/manageRoom';</script>");
+            out.println("<script>alert('Failed to update room status. Try again!'); window.location.href='manageRoom';</script>");
         }
     } else {
         // If the room does not exist, insert a new record
@@ -148,9 +148,9 @@ out.println("<div class='content'>");
         ps.close();
 
         if (result > 0) {
-            out.println("<script>alert('Room added successfully!'); window.location.href='/HotelManageSytem/manageRoom';</script>");
+            out.println("<script>alert('Room added successfully!'); window.location.href='manageRoom';</script>");
         } else {
-            out.println("<script>alert('Failed to add room. Try again!'); window.location.href='/HotelManageSytem/manageRoom';</script>");
+            out.println("<script>alert('Failed to add room. Try again!'); window.location.href='manageRoom';</script>");
         }
     }
 

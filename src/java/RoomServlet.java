@@ -54,7 +54,7 @@ public class RoomServlet extends HttpServlet {
                     String roomImage = rs.getString("room_image");
                     String roomPrice = String.valueOf(rs.getDouble("room_price"));
                     out.println("<div class='room-card'>");
-                    out.println("<a href='/HotelManageSytem/details?roomName=" + URLEncoder.encode(roomName, "UTF-8") + "'>");
+                    out.println("<a href='details?roomName=" + URLEncoder.encode(roomName, "UTF-8") + "'>");
                     out.println("<img src='" + roomImage + "' alt='" + roomName + "'>");
                     out.println("</a>");
                     out.println("<h3>" + roomName + "</h3>");

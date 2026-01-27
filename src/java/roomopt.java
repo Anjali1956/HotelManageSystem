@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/roomopt")
 public class roomopt extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,13 +21,11 @@ public class roomopt extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String successMessage = request.getParameter("success");
-
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Manage Rooms</title>");
 
-        /* ===== SIMPLE CSS ===== */
         out.println("<style>");
         out.println("body{margin:0;font-family:Arial;background:#f4f4f9}");
         out.println(".navbar{position:fixed;top:0;left:0;width:100%;height:60px;background:#2c3e50;display:flex;align-items:center;z-index:1000}");
@@ -46,7 +43,6 @@ public class roomopt extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
 
-        /* ===== NAVBAR ===== */
         out.println("<div class='navbar'>");
         out.println("<h1>Admin Dashboard</h1>");
         out.println("<div>");
@@ -61,7 +57,6 @@ public class roomopt extends HttpServlet {
             out.println("<script>alert('Room deleted successfully');</script>");
         }
 
-       
         out.println("<div class='container'>");
         out.println("<h2 style='text-align:center'>All Rooms</h2>");
         out.println("<table>");

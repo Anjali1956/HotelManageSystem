@@ -15,7 +15,7 @@ public class AdminLogin extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (ADMIN_USERNAME.equals(username) && ADMIN_PASSWORD.equals(password)) {
-            response.sendRedirect("http://localhost:8080/HotelManageSytem/Adashboard");
+            response.sendRedirect("Adashboard");
         } else {
             displayLoginForm(response, "Invalid username or password");
         }

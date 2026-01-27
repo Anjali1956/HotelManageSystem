@@ -81,7 +81,7 @@ out.println("</nav>");
                 out.println("<td>" + bookingDate + "</td>");
                 out.println("<td>" + specialRequests + "</td>");
                 out.println("<td>" + status + "</td>");  
-                out.println("<td><a href='http://localhost:8080/HotelManageSytem/UpdateBooking?id=" + bookingId + "'>Update</a> | <a href='http://localhost:8080/HotelManageSytem/DeleteBookings?id=" + bookingId + "'>Delete</a></td>");
+                out.println("<td><a href='UpdateBooking?id=" + bookingId + "'>Update</a> | <a href='DeleteBookings?id=" + bookingId + "'>Delete</a></td>");
                 if ("Pending".equals(status)) {
                      out.println("<td><a href='Payment?id=" + bookingId + "'>Pay Now</a></td>");
                 } else {

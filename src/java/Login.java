@@ -45,25 +45,23 @@ public class Login extends HttpServlet {
         out.println("<input type='password' name='password' required><br>");
         out.println("<button type='submit'>Login</button>");
         out.println("</form>");
-        out.println("<p>Don't have an account? <a href='http://localhost:8080/HotelManageSytem/register'>Register here</a></p>");
+        out.println("<p>Don't have an account? <a href='register'>Register here</a></p>");
         out.println("</div>");
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");
     }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                    "jdbc:mysql://tramway.proxy.rlwy.net:15642/railway?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true",
                     "root", "hkUDBZINkEHiAfkVUhQDeiDdgsbueMdZ");
-          
+           
             String query = "SELECT * FROM user WHERE username = ? AND password = ?";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, username);
@@ -73,13 +71,13 @@ public class Login extends HttpServlet {
             if (rs.next()) {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
-                response.sendRedirect("http://localhost:8080/HotelManageSytem/dashboard");
+                response.sendRedirect("dashboard");
             } else {
-                response.sendRedirect("http://localhost:8080/HotelManageSytem/Login?error=notregistered");
+                response.sendRedirect("Login?error=notregistered");
             }
             con.close();
         } catch (Exception e) {
-            response.sendRedirect("http://localhost:8080/HotelManageSytem/Login?error=server");
+            response.sendRedirect("Login?error=server");
         }
     }
 }
