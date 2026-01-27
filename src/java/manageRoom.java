@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/manageroom")
+@WebServlet("/manageRoom")
 public class manageRoom extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     response.setContentType("text/html");
@@ -33,7 +33,6 @@ out.println("</style>");
 out.println("<link rel='stylesheet' type='text/css' href='" + request.getContextPath() + "/manageroom.css'>");
 
     out.println("</head>");
-    out.println("<body>");
     out.println("<body>");
 out.println("<div class='navbar'>");
 out.println("<h1>Admin Dashboard</h1>");
