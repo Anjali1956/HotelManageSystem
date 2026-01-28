@@ -37,15 +37,15 @@ out.println("<link rel='stylesheet' type='text/css' href='" + request.getContext
 out.println("<div class='navbar'>");
 out.println("<h1>Admin Dashboard</h1>");
 out.println("<div>");
-out.println("<a href='Adashboard'>Dashboard</a>");
-out.println("<a href='manageRoom'>Add Room</a>");
-out.println("<a href='AdminBookings'>Bookings</a>");
-out.println("<a href='roomopt'>Manage Rooms</a>");
+out.println("<a href='" + request.getContextPath() + "/Adashboard'>Dashboard</a>");
+out.println("<a href='" + request.getContextPath() + "/manageRoom'>Add Room</a>");
+out.println("<a href='" + request.getContextPath() + "/AdminBookings'>Bookings</a>");
+out.println("<a href='" + request.getContextPath() + "/roomopt'>Manage Rooms</a>");
+
 out.println("</div>");
 out.println("</div>");
 out.println("<div class='content'>");
 out.println("<form action='" + request.getContextPath() + "/manageRoom' method='post'>");
-
 
     out.println("<h1>Add Rooms</h1>");
     out.println("<label>Room Name:</label>");
@@ -123,11 +123,18 @@ out.println("<form action='" + request.getContextPath() + "/manageRoom' method='
         int result = ps.executeUpdate();
         ps.close();
 
-        if (result > 0) {
-            out.println("<script>alert('Room status updated successfully!'); window.location.href='manageRoom';</script>");
-        } else {
-            out.println("<script>alert('Failed to update room status. Try again!'); window.location.href='manageRoom';</script>");
-        }
+      if (result > 0) {
+    out.println("<script>");
+    out.println("alert('Room status updated successfully!');");
+    out.println("window.location.href='" + request.getContextPath() + "/manageRoom';");
+    out.println("</script>");
+} else {
+    out.println("<script>");
+    out.println("alert('Failed to update room status. Try again!');");
+    out.println("window.location.href='" + request.getContextPath() + "/manageRoom';");
+    out.println("</script>");
+}
+
     } else {
         // If the room does not exist, insert a new record
         String insertQuery = "INSERT INTO rooms (room_name, room_image, room_price, room_size, bed_type, max_occupancy, room_features, room_amenities, room_view, room_rating, status, room_description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -148,9 +155,11 @@ out.println("<form action='" + request.getContextPath() + "/manageRoom' method='
         ps.close();
 
         if (result > 0) {
-            out.println("<script>alert('Room added successfully!'); window.location.href='manageRoom';</script>");
+            out.println("<script>alert('Room added successfully!'); window.location.href='" + request.getContextPath() + "/manageRoom';</script>");
+
         } else {
-            out.println("<script>alert('Failed to add room. Try again!'); window.location.href='manageRoom';</script>");
+            out.println("<script>alert('Failed to add room. Try again!'); window.location.href='" + request.getContextPath() + "/manageRoom';</script>");
+
         }
     }
 
