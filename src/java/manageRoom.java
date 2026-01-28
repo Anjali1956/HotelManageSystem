@@ -44,8 +44,9 @@ out.println("<a href='roomopt'>Manage Rooms</a>");
 out.println("</div>");
 out.println("</div>");
 out.println("<div class='content'>");
+out.println("<form action='" + request.getContextPath() + "/manageRoom' method='post'>");
 
-    out.println("<form action='manageRoom' method='post'>");
+
     out.println("<h1>Add Rooms</h1>");
     out.println("<label>Room Name:</label>");
     out.println("<input type='text' name='roomName' required><br>");
